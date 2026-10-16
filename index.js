@@ -11,7 +11,8 @@
  * echo("test", 1); // "test"
  */
 export function echo(word, n) {
-  // TODO
+  if (n < 0) return "";
+  return word.repeat(n);
 }
 
 /**
@@ -27,7 +28,8 @@ export function echo(word, n) {
  * echoWithSpace("test", 1); // "test"
  */
 export function echoWithSpace(word, n) {
-  // TODO
+  if (n <= 0) return "";
+  return word.repeat(n);
 }
 
 /**
@@ -41,9 +43,7 @@ export function echoWithSpace(word, n) {
  * @example
  * sumTo(100); // 5050
  */
-export function sumTo(n) {
-  // TODO
-}
+export function sumTo(n) {}
 
 /**
  * @param {number} a - The starting integer.
@@ -107,9 +107,7 @@ export function sumOddsToN(n) {
  * @example
  * getGrowthTime(5, 78); // 80
  */
-export function getGrowthTime(start, target) {
-  // TODO
-}
+export function getGrowthTime(start, target) {}
 
 /**
  * The amount of money in a savings account grows by a certain rate every year.
