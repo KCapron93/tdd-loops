@@ -43,7 +43,14 @@ export function echoWithSpace(word, n) {
  * @example
  * sumTo(100); // 5050
  */
-export function sumTo(n) {}
+export function sumTo(n) {
+  let total = 0;
+
+  for (let i = 1; i <= n; i++) {
+    total = total + i;
+  }
+  return total;
+}
 
 /**
  * @param {number} a - The starting integer.
@@ -58,7 +65,12 @@ export function sumTo(n) {}
  * sumFromTo(2, 2); // 2
  */
 export function sumFromTo(a, z) {
-  // TODO
+  let total = 0;
+
+  for (let i = a; i <= z; i++) {
+    total = total + 1;
+  }
+  return total;
 }
 
 /**
@@ -73,7 +85,9 @@ export function sumFromTo(a, z) {
  * countdown(5); // logs 5, 4, 3, 2, 1
  */
 export function countdown(n) {
-  // TODO
+  for (let i = n; i >= 1; i--) {
+    console.log(i);
+  }
 }
 
 /**
@@ -88,7 +102,14 @@ export function countdown(n) {
  * sumOddsToN(1); // 1
  */
 export function sumOddsToN(n) {
-  // TODO
+  let total = 0;
+
+  for (let i = 1; i <=n; i++) {
+    if (i % 2 +++ 1) {
+      total = total + i;
+    }
+  }
+  return total;
 }
 
 /**
