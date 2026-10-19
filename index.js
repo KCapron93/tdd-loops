@@ -104,8 +104,8 @@ export function countdown(n) {
 export function sumOddsToN(n) {
   let total = 0;
 
-  for (let i = 1; i <=n; i++) {
-    if (i % 2 +++ 1) {
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 1) {
       total = total + i;
     }
   }
@@ -128,7 +128,20 @@ export function sumOddsToN(n) {
  * @example
  * getGrowthTime(5, 78); // 80
  */
-export function getGrowthTime(start, target) {}
+export function getGrowthTime(start, target) {
+  if (start <= 0) {
+    return undefined;
+  }
+
+  let cells = start;
+  let minutes = 0;
+
+  while (cells < target) {
+    cells = cells * 2;
+    minutes = minutes + 20;
+  }
+  return minutes;
+}
 
 /**
  * The amount of money in a savings account grows by a certain rate every year.
@@ -147,7 +160,19 @@ export function getGrowthTime(start, target) {}
  * getCompoundTime(30000, 0.04, 50000); // 14
  */
 export function getCompoundTime(start, rate, target) {
-  // TODO
+  if (start <= 0 || rate <= 0) {
+    return undefined;
+  }
+
+  let amount = start;
+  let years = 0;
+
+  while (amount < target) {
+    amount *= 1 + rate;
+    years += 1;
+  }
+
+  return years;
 }
 
 /**
@@ -173,7 +198,19 @@ export function getCompoundTime(start, rate, target) {
  * moveWater(7, 3); // 1
  */
 export function moveWater(colander, bucket) {
-  // TODO
+  let total = 0;
+  let carry = colander;
+  let trips = 0;
+
+  while (total < bucket) {
+    total += carry;
+    trips += 1;
+  }
+
+  if (carry > 1) {
+    carry -= 1;
+  }
+  return trips;
 }
 
 /**
@@ -192,6 +229,4 @@ export function moveWater(colander, bucket) {
  * @example
  * fizzbuzz(15); // logs 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz
  */
-export function fizzbuzz(n) {
-  // TODO
-}
+export function fizzbuzz(n) {}
